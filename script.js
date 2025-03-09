@@ -67,7 +67,7 @@ function renderTasks(filter) {
     tasksToShow = tasks;
   }
 
-  // create li for each task 
+  // loop through array and create a list item for each
   for (var i = 0; i < tasksToShow.length; i++) {
     var task = tasksToShow[i];
     createTaskListItem(task);
@@ -77,7 +77,7 @@ function renderTasks(filter) {
   updateCounter();
 }
 
-
+//create new list item element for task
 function createTaskListItem(task) {
   var li = document.createElement("li");
 
@@ -101,7 +101,7 @@ function createTaskListItem(task) {
 
   li.appendChild(textContainer);
 
-  // Done button
+  // create done button
   var doneBtn = document.createElement("button");
   doneBtn.textContent = "Done";
   doneBtn.addEventListener("click", function() {
@@ -112,7 +112,7 @@ function createTaskListItem(task) {
   });
   li.appendChild(doneBtn);
 
-  // Remove button
+  // create remove button
   var removeBtn = document.createElement("button");
   removeBtn.textContent = "Remove";
   removeBtn.addEventListener("click", function() {
@@ -139,7 +139,7 @@ function updateCounter() {
   taskCounter.textContent = "Tasks left: " + activeCount;
 }
 
-// saves to local storage
+// saves task to local storage
 function saveTasks() {
   localStorage.setItem("myTasks", JSON.stringify(tasks));
 }
