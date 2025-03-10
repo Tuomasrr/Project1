@@ -80,24 +80,28 @@ function renderTasks(filter) {
 function createTaskListItem(task) {
   var li = document.createElement("li");
 
-  // If task is done, add "done" class
+  // If task is done, add to done class
   if (task.done) {
     li.classList.add("done");
   }
 
+  //Creates containerr to task and priority
   var textContainer = document.createElement("div");
   textContainer.className = "task-text";
 
+  //Span for task
   var mainText = document.createElement("span");
   mainText.className = "main-text";
   mainText.textContent = task.text;
   textContainer.appendChild(mainText);
 
+  //span for priority
   var priorityLabel = document.createElement("span");
   priorityLabel.className = "priority-label";
   priorityLabel.textContent = "Priority: " + task.priority;
   textContainer.appendChild(priorityLabel);
 
+  //adds container to the list item
   li.appendChild(textContainer);
 
   // create done button
@@ -126,6 +130,7 @@ function createTaskListItem(task) {
 
   taskList.appendChild(li);
 }
+
 
 // updates task counter
 function updateCounter() {
