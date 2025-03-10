@@ -2,7 +2,6 @@ var tasks = [];
 var taskForm = document.getElementById("taskForm");
 var taskInput = document.getElementById("taskInput");
 var prioritySelect = document.getElementById("prioritySelect");
-var errorMsg = document.getElementById("errorMsg");
 var taskList = document.getElementById("taskList");
 var taskCounter = document.getElementById("taskCounter");
 var filterBtns = document.querySelectorAll(".filter-btn");
